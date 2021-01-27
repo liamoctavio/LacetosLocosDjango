@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+<br>
+<div class="container">
+    <img src="{% static 'core/'%}img/logo_1.png" class="rounded mx-auto d-block" alt="..." height="100" width="100">
+      <br>
+    <h2> Agregar un nuevo producto </h2>
+
+    <div class="container"> </div>
+
+        {%load crispy_forms_tags %}
+
+        <form action="" method="POST" class="form-group">
+            {% csrf_token %}
+            <table>
+                {{form | crispy}}
+            </table>
+            <input type="reset" value = "Limpiar">
+            <input type= "submit" value = "Guardar">
+        </form>
+
+        <form>
+    </div>
+  
+
+
+<div>
+
+   
+{{ mensaje }}
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% load static  %}
+
+{% block contenido %}
+
+<!--CARDS INICIO-->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="{% static 'core/'%}img/queso_1.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Queso Ranco Trozo</h5>
+                  <p class="card-text">Queso Ranco wenon 790 pesitos</p>
+                  <a href="" class="btn btn-primary float-right">Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="{% static 'core/'%}img/queso_2.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Queso Reggianito</h5>
+                  <p class="card-text">Pa los tallarines </p>
+                  <a href="" class="btn btn-primary float-right">Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="{% static 'core/'%}img/queso_3.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Queso Ranco Laminado</h5>
+                  <p class="card-text">Queso laminado rico </p>
+                  <a href="" class="btn btn-primary float-right">Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="{% static 'core/'%}img/queso_4.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Queso Gouda</h5>
+                  <p class="card-text"> Queso bien rico gouda</p>
+                  <a href="" class="btn btn-primary float-right">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!--CARDS FINN-->
+
+{% endblock %}

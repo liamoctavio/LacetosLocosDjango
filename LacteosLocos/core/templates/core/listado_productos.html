@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% block contenido %}
+<br>
+<div class="container">
+<br>
+  <img src="{% static 'core/'%}img/logo_1.png" class="rounded mx-auto d-block" alt="..." height="100" width="100">
+      <br>
+  <h2 > Listado Productos </h2>
+  <table class="table">
+    
+    <div class="container">
+
+    <thead class="table-primary">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha Elaboracion</th>
+        <th scope="col">Fecha Caducidad</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Modifcar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    
+    
+    
+    {% for p in productos %}
+      <tr>
+        <th scope="row">{{p.nombre}}</th>
+        <td>{{p.fecha_elaboracion}}</td>
+        <td>{{p.fecha_caducidad}}</td>
+        <td>{{p.tipo}}</td>
+        <td>
+          <a href="{% url 'modificar_producto' p.id %}">modificar</a>    
+        </td>
+        <td>
+          <a href="{% url 'eliminar_producto' p.id %}">Eliminar</a>
+        </td>
+      </tr>
+
+      
+      {% endfor%}
+
+
+      </table>
+</div>
+
+{% endblock %}

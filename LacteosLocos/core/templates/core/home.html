@@ -1,0 +1,100 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+    
+
+    <!-- CARRUSEL IMAGENES INICIO -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'core/'%}img/vaca_1.jfif" class="d-block w-100" alt="..." width="1000" height="600">
+            <div class="carousel-caption d-none d-md-block   text-danger">
+                <h4>Nuestras vacas son las mejores <h5>
+                <p>Vacas del meridiano Sur</p>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'core/'%}img/vaca_2.jfif" class="d-block w-100" alt="..."  width="1000" height="600">
+            <div class="carousel-caption d-none d-md-block  bg-light text-dark ">
+                <h4>Nuestras vacas son las mejores <h5>
+                <p>Vacas del meridiano Sur</p>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'core/'%}img/vaca_3.jfif" class="d-block w-100" alt="..."  width="1000" height="600">
+            <div class="carousel-caption d-none d-md-block  text-light ">
+                <h4>Nuestras vacas son las mejores <h5>
+                <p>Vacas del meridiano Sur</p>
+
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- CARRUSEL IMAGENES FIN -->
+
+      <br><br>
+      <!-- CARDS INICIO-->
+      <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4">
+          <div class="card">
+            <img src="{% static 'core/'%}img/quienes_somos.jfif" class="card-img-top" alt="..." width="800" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Quienes Somos</h5>
+              <p class="card-text">Lacteos Locos somos</p>
+              <a href="{% url 'quienessomos' %}" class="btn btn-primary">Saber Mas</a>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="{% static 'core/'%}img/productos_1.jfif" class="card-img-top" alt="..." width="800" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Productos</h5>
+              <p class="card-text">Aqui tendras los productos</p>
+              <a href="{% url 'quesoslacteos' %}" class="btn btn-primary">Saber Mas</a>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="{% static 'core/'%}img/productos_2.jfif" class="card-img-top" alt="..." width="800" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Imagenes</h5>
+              <p class="card-text">mira imagenes</p>
+              <a href="{% url 'galeria' %}" class="btn btn-primary">Saber Mas</a>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="{% static 'core/'%}img/productos_3.jfif" class="card-img-top" alt="..." width="800" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Registrate</h5>
+              <p class="card-text">Registrate aca...</p>
+              <a href="{% url 'formulario' %}" class="btn btn-primary">Saber Mas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARDS FIN-->
+{% endblock %}
+
+   
